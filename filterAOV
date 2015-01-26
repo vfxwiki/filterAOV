@@ -1,13 +1,13 @@
 # https://github.com/vfxwiki/FilterAov created: rafal kaniewski
-# v0.6b / last editor: rafal kaniewski
+# v0.1b / last editor: rafal kaniewski
 set cut_paste_input [stack 0]
 version 9.0 v2
 push $cut_paste_input
 Group {
  name AovFilter
  selected true
- xpos 4259
- ypos 894
+ xpos 4321
+ ypos 892
  cached true
  addUserKnob {20 AovFilter}
  addUserKnob {41 channels l "channel to use" T From.Achannels}
@@ -90,8 +90,8 @@ Group {
  addUserKnob {20 Matrix3x3}
  addUserKnob {41 filter T MatrixSwitch.filter}
  addUserKnob {20 Info}
- addUserKnob {22 HELP l " HELP " T "nukescripts.start('href=\"http://www.vfxwiki.org/tiki-editpage.php?page=FilterAOV')" +STARTLINE}
- addUserKnob {26 text01 l version: T b1}
+ addUserKnob {22 HELP l " HELP " T "import webbrowser\nwebbrowser.open(\"http://www.vfxwiki.org/tiki-index.php?page=FilterAOV\") \n\n\n" +STARTLINE}
+ addUserKnob {26 text01 l version: T 0.1b}
  addUserKnob {26 text02 l "date created:" T 1/1/2015}
  addUserKnob {26 text03 l "last modified:" T 1/1/2015}
  addUserKnob {26 creator l creator: T www.vfxwiki.org}
@@ -113,13 +113,13 @@ Group {
   xpos -473
   ypos -560
  }
-set N3bc46d10 [stack 0]
+set N3cb48bf0 [stack 0]
  Dot {
   name Dot27
   xpos -619
   ypos -483
  }
-set N39a05460 [stack 0]
+set N399c7460 [stack 0]
  Dot {
   name Dot25
   xpos -743
@@ -130,8 +130,8 @@ set N39a05460 [stack 0]
   xpos -739
   ypos -433
  }
-set N39a284a0 [stack 0]
-push $N39a284a0
+set N3cb56fc0 [stack 0]
+push $N3cb56fc0
 add_layer {indirect_diffuse indirect_diffuse.red indirect_diffuse.green indirect_diffuse.blue indirect_diffuse.alpha}
  Merge2 {
   inputs 2
@@ -149,7 +149,7 @@ add_layer {indirect_diffuse indirect_diffuse.red indirect_diffuse.green indirect
   xpos -773
   ypos -351
  }
-set N39a4de70 [stack 0]
+set N399e09e0 [stack 0]
  Dot {
   name Dot15
   xpos -2383
@@ -160,25 +160,25 @@ set N39a4de70 [stack 0]
   xpos -2393
   ypos -315
  }
-set N396c70b0 [stack 0]
+set N37eb2cf0 [stack 0]
  Dot {
   name Dot13
   xpos -2338
   ypos -315
  }
-set N396b4020 [stack 0]
+set N37ea5ab0 [stack 0]
  Dot {
   name Dot14
   xpos -2228
   ypos -315
  }
-set N39a77dd0 [stack 0]
+set N3cb7b140 [stack 0]
  Dot {
   name Dot16
   xpos -2082
   ypos -315
  }
-set N39a70230 [stack 0]
+set N3cbf0740 [stack 0]
  Dot {
   name Dot17
   xpos -1939
@@ -199,7 +199,7 @@ set N39a70230 [stack 0]
   xpos -1942
   ypos -140
  }
-push $N39a70230
+push $N3cbf0740
  Matrix {
   matrix {
       {1 0 -1}
@@ -210,7 +210,7 @@ push $N39a70230
   xpos -2116
   ypos -220
  }
-push $N39a77dd0
+push $N3cb7b140
  Matrix {
   matrix {
       {2 0 0}
@@ -221,7 +221,7 @@ push $N39a77dd0
   xpos -2262
   ypos -227
  }
-push $N396b4020
+push $N37ea5ab0
  Matrix {
   matrix {
       {-1 -1 -1}
@@ -232,13 +232,13 @@ push $N396b4020
   xpos -2372
   ypos -227
  }
-push $N396c70b0
+push $N37eb2cf0
  Dot {
   name Dot19
   xpos -2448
   ypos -315
  }
-set N39af7870 [stack 0]
+set N3d03b300 [stack 0]
  Matrix {
   matrix {
       {-1 -1 -1}
@@ -250,13 +250,13 @@ set N39af7870 [stack 0]
   xpos -2482
   ypos -227
  }
-push $N39af7870
+push $N3d03b300
  Dot {
   name Dot20
   xpos -2558
   ypos -315
  }
-set N396bf840 [stack 0]
+set N3cbe68f0 [stack 0]
  Matrix {
   matrix {
       {0 1 0}
@@ -268,7 +268,7 @@ set N396bf840 [stack 0]
   xpos -2592
   ypos -227
  }
-push $N396bf840
+push $N3cbe68f0
  Dot {
   name Dot21
   xpos -2682
@@ -294,7 +294,7 @@ push $N396bf840
   xpos -2282
   ypos -5
  }
-push $N39a4de70
+push $N399e09e0
  Colorspace {
   colorspace_out CIE-Lab
   name Colorspace1
@@ -312,7 +312,7 @@ push $N39a4de70
   xpos -1550
   ypos -196
  }
-push $N39a4de70
+push $N399e09e0
  Soften {
   channels rgba
   amount 1
@@ -321,21 +321,21 @@ push $N39a4de70
   xpos -1375
   ypos -250
  }
-push $N39a4de70
+push $N399e09e0
  Median {
   ignore_top_line false
   name Median1
   xpos -1201
   ypos -244
  }
-push $N39a4de70
+push $N399e09e0
  Blur {
   size 3
   name Blur1
   xpos -956
   ypos -228
  }
-push $N39a4de70
+push $N399e09e0
  Denoise2 {
   "Noise Analysis" 1
   analysisRegion {1509 828 1593 910}
@@ -377,14 +377,14 @@ push $N39a4de70
   xpos -749
   ypos 300
  }
-set N3ccc66b0 [stack 0]
+set N3cb92170 [stack 0]
  Dot {
   name Dot28
   xpos -749
   ypos 439
  }
-set N3cccab20 [stack 0]
-push $N3cccab20
+set N3cbf6d10 [stack 0]
+push $N3cbf6d10
  Merge2 {
   inputs 2
   operation max
@@ -410,10 +410,10 @@ push $N3cccab20
   xpos -347
   ypos 358
  }
-push $N3bc46d10
-push $N3ccc66b0
-push $N39a284a0
-push $N39a05460
+push $N3cb48bf0
+push $N3cb92170
+push $N3cb56fc0
+push $N399c7460
  Merge2 {
   inputs 2
   operation from
@@ -459,4 +459,5 @@ push $N39a05460
   ypos 529
  }
 end_group
+
 
